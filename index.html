@@ -23,9 +23,6 @@
     <!--Custom Css link Start-->
     <link rel="stylesheet" href="css/style.css" />
     <!--Custom Css link End-->
-    <!--Responsive Css Link Start-->
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!--Responsive Css Link End-->
   </head>
   <body>
     <!--Main Menu Start -->
@@ -82,7 +79,9 @@
                 type="text"
                 placeholder="Search for Meal..."
               />
-              <button id="search" class="searchBtn">Search</button>
+              <button onclick="searchButton()" id="search" class="searchBtn">
+                Search
+              </button>
             </div>
           </div>
         </div>
@@ -99,9 +98,10 @@
     <!--Show product details Start-->
     <!--Product Show Section Start-->
     <h3 id="searchResultTitle">Your Search Food Results:</h3>
+    <h4 id="error"></h4>
     <div class="productShow mt-5">
       <div class="container">
-        <div id="searchProductResult" class="row"></div>
+        <div id="searchProduct" class="row"></div>
       </div>
     </div>
     <!--Product Show Section End-->
