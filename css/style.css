@@ -67,6 +67,9 @@ input[type="text"] {
   font-family: roboto;
   font-weight: 500;
 }
+#searchProductResult {
+  color: red;
+}
 
 /* Product Show Section End */
 

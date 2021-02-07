@@ -16,29 +16,34 @@ searchBtn.addEventListener("click", function () {
 
 const showProduct = (showProductAll) => {
   let htmlTemplate = "";
-  showProductAll.forEach((showProductDetails) => {
-    htmlTemplate =
-      htmlTemplate +
-      `
-    <div class="col-md-3">
-      <span onclick="productDes(${showProductDetails.idMeal})"  id="product">
-        <div class="productShowInner">
-          <div class="productImg">
-            <img
-              id="productphoto"
-              src="${showProductDetails.strMealThumb}"
-              class="img-fluid"
-              alt=""
-            />
+  if (showProductAll) {
+    showProductAll.forEach((showProductDetails) => {
+      htmlTemplate =
+        htmlTemplate +
+        `
+      <div class="col-md-3">
+        <span onclick="productDes(${showProductDetails.idMeal})"  id="product">
+          <div class="productShowInner">
+            <div class="productImg">
+              <img
+                id="productphoto"
+                src="${showProductDetails.strMealThumb}"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="productName text-center">
+              <p>${showProductDetails.strMeal}</p>
+            </div>
           </div>
-          <div class="productName text-center">
-            <p>${showProductDetails.strMeal}</p>
-          </div>
-        </div>
-      </span>
-    </div>
-      `;
-  });
+        </span>
+      </div>
+        `;
+    });
+  } else {
+    htmlTemplate = "Data not found";
+    document.getElementById("searchProductResult").innerHTML = htmlTemplate;
+  }
 
   document.getElementById("searchProductResult").innerHTML = htmlTemplate;
 };
