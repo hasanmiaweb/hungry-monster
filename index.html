@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hungry monster || assignment project</title>
+    <!--Site Favicon link start-->
+    <link rel="icon" href="image/logo/favicon.png" />
+    <!--Site Favicon link End-->
+    <!--font-awesome link Start-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--font-awesome link End-->
+    <!--GOOGLE FONT Link Start-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!--GOOGLE FONT Link End-->
+    <!--Bootstrap Css Link Start-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--Bootstrap Css Link End-->
+    <!--Custom Css link Start-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Custom Css link End-->
+    <!--Responsive Css Link Start-->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!--Responsive Css Link End-->
+  </head>
+  <body>
+    <!--Main Menu Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="image/logo/logo.png"
+            width="100px"
+            class="img-fluid"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Main Menu End -->
+
+    <!--Search Bar Start-->
+    <div id="searchMainbar" class="searchBar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="searchBarinner text-center">
+              <i id="searchIcon" class="fas fa-search"></i>
+              <input
+                id="searchinput"
+                type="text"
+                placeholder="Search for Meal..."
+              />
+              <button id="search" class="searchBtn">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Search Bar End-->
+
+    <!--Product Show Section Start-->
+    <div class="productShow mt-5">
+      <div class="container">
+        <div id="searchProductResult" class="row"></div>
+      </div>
+    </div>
+    <!--Product Show Section End-->
+
+    <!--Show product details End-->
+    <div class="showProductdetails">
+      <div class="container">
+        <div id="singleProductDetails" class="row"></div>
+      </div>
+    </div>
+    <!--Show product details Start-->
+
+    <!--Bootstrap Js Link Start-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Bootstrap Js Link End-->
+
+    <!--Javascript Link Start-->
+    <script src="js/app.js"></script>
+    <!--Javascript Js Link End-->
+  </body>
+</html>

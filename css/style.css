@@ -1,0 +1,108 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+/*Nav Menu Start*/
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+  color: #383838;
+  line-height: 21px;
+}
+
+/*Nav Menu end*/
+
+/*Search Bar Start*/
+input[type="text"] {
+  background: #f8f7f5;
+  border: none;
+  outline: none;
+  border: 1px solid #ddd;
+  text-align: left;
+  width: 500px;
+  height: 52px;
+  padding-left: 50px;
+  border-radius: 8px 0px 0px 8px;
+}
+.searchBar {
+  padding-top: 50px;
+}
+
+#searchIcon {
+  position: absolute;
+  z-index: 9;
+  padding-top: 18px;
+  padding-left: 18px;
+  color: #989898;
+}
+.searchBtn {
+  background: #f06c4e;
+  border: none;
+  position: absolute;
+  padding: 14px;
+  border-radius: 0px 8px 8px 0px;
+  color: white;
+  outline: none;
+}
+
+.searchBtn:focus {
+  outline: none;
+}
+/*Search Bar End*/
+
+/* Product Show Section Start */
+#product {
+  cursor: pointer;
+}
+.productShowInner {
+  background: #f8f7f5;
+}
+.productName p {
+  padding: 16px;
+  color: black;
+  font-family: roboto;
+  font-weight: 500;
+}
+
+/* Product Show Section End */
+
+/* show Product details Start */
+
+.showProductdetails .shoProductDetailsTitle h2 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: black;
+  padding-top: 20px;
+  text-shadow: 0px 1px 1px black;
+}
+
+.shoProductDetailsTitle h4 {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Roboto";
+  padding-top: 10px;
+}
+
+ul#detailsLi {
+  list-style: none;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+#detailsLi li i {
+  color: #f06c4e;
+  font-size: 18px;
+}
+
+.shoProductDetailsInner img {
+  width: 588px;
+  height: 322px;
+}
+
+/* show Product details End */
