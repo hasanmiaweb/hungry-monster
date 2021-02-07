@@ -72,6 +72,7 @@ const productFullInfo = (singleProductInfo) => {
 
   let htmlTemplate = `
   <div class="col-md-6 m-auto">
+  <h3 id="searchResultTitle">Food Details</h3>
   <div class="shoProductDetailsInner mt-3">
     <img src="${singleProductInfo.strMealThumb}" class="img-fluid" alt="" />
     <div class="shoProductDetailsTitle">
@@ -87,12 +88,11 @@ const productFullInfo = (singleProductInfo) => {
         .join("")}
       </ul>
       <hr>
-   
     </div>
   </div>
 </div>`;
 
-  searchProductResult.classList.add("d-none");
-  searchMainbar.classList.add("d-none");
+  // searchProductResult.classList.add("d-none");
+  // searchMainbar.classList.add("d-none");
   document.getElementById("singleProductDetails").innerHTML = htmlTemplate;
 };

@@ -108,4 +108,24 @@ ul#detailsLi {
   height: 322px;
 }
 
+#searchResultTitle {
+  text-align: center;
+  padding-top: 20px;
+  color: #ff8366;
+  font-weight: 600;
+  font-family: unset;
+}
+
+#full-description {
+  background: #f06c4e;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+#full-description {
+  outline: none;
+}
 /* show Product details End */
