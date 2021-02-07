@@ -16,7 +16,6 @@ searchBtn.addEventListener("click", function () {
 
 const showProduct = (showProductAll) => {
   let htmlTemplate = "";
-
   showProductAll.forEach((showProductDetails) => {
     htmlTemplate =
       htmlTemplate +
@@ -48,16 +47,17 @@ const showProduct = (showProductAll) => {
 const productDes = (singleProductDetails) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${singleProductDetails}`;
   fetch(url)
-    .then((res) => res.json())
-    .then((data) => productFullInfo(data));
+    .then((response) => response.json())
+    .then((data) => {
+      productFullInfo(data.meals[0]);
+    });
 };
 
 const productFullInfo = (singleProductInfo) => {
-  let fakalaArry = [];
-  console.log(fakalaArry);
-  for (let i = 1; i <= 20; i++) {
+  let singleProductadd = [];
+  for (let i = 1; i <= 25; i++) {
     if (singleProductInfo[`strIngredient${i}`]) {
-      fakalaArry.push(
+      singleProductadd.push(
         `${singleProductInfo[`strMeasure${i}`]} ${
           singleProductInfo[`strIngredient${i}`]
         }`
@@ -68,21 +68,17 @@ const productFullInfo = (singleProductInfo) => {
   let htmlTemplate = `
   <div class="col-md-6 m-auto">
   <div class="shoProductDetailsInner mt-3">
-    <img src="${
-      singleProductInfo.meals[0].strMealThumb
-    }" class="img-fluid" alt="" />
+    <img src="${singleProductInfo.strMealThumb}" class="img-fluid" alt="" />
     <div class="shoProductDetailsTitle">
-      <h2>${singleProductInfo.meals[0].strMeal}</h2>
+      <h2>${singleProductInfo.strMeal}</h2>
       <h4>Ingredients</h4>
 
       <ul id="detailsLi">
-      ${fakalaArry
-        .map((liInfo) => {
-          `<li>
-          <i class="fas fa-check-square"></i>
-          <span>${liInfo}</span>
-        </li>`;
-        })
+      ${singleProductadd
+        .map(
+          (liContent) =>
+            `<li><i class="fas fa-check-square"></i><span> ${liContent}</span></li>`
+        )
         .join("")}
       </ul>
       <hr>
