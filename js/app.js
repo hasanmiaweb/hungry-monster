@@ -35,7 +35,6 @@ const desplayMeals = (showProductAll) => {
         </div>`;
     });
   } else {
-    // htmlTemplate = "Data not found";
     htmlTemplate = document.getElementById(
       "error"
     ).innerHTML = `<div id="errorMessege" ><i class="fas fa-exclamation-triangle"></i> <h2>Oops..!</h2>
